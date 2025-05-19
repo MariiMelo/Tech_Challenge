@@ -42,3 +42,18 @@ if uploaded_file:
     rmse = ((df_merge['y'] - df_merge['yhat']) ** 2).mean() ** 0.5
     st.write(f"**MAE:** {mae:.2f}")
     st.write(f"**RMSE:** {rmse:.2f}")
+   
+    st.subheader("Componentes da Previsão (Tendência e Sazonalidade)")
+    try:
+        from prophet.plot import plot_components_plotly
+        fig3 = plot_components_plotly(model, forecast)
+        st.plotly_chart(fig3)
+    except:
+        fig3 = model.plot_components(forecast)
+        st.pyplot(fig3)
+
+    
+    st.subheader("Tabela com os Próximos 30 Dias de Previsão")
+    st.dataframe(
+        forecast_only[['ds', 'yhat', 'yhat_lower', 'yhat_upper']].reset_index(drop=True).head(30)
+    )
