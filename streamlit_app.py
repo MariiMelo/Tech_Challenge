@@ -37,7 +37,8 @@ if uploaded_file:
     ax.set_xlabel('Data')
     ax.set_ylabel('Preço (USD)')
     # >>> CORREÇÃO DO EIXO X
-    ax.xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m-%d'))
+    ax.xaxis.set_major_locator(mdates.DayLocator(interval=5))  # mostra uma data a cada 5 dias
+    ax.xaxis.set_major_formatter(mdates.DateFormatter('%d/%m'))  # formato mais compacto
     plt.xticks(rotation=45)
     ax.grid(True)
     plt.tight_layout()
