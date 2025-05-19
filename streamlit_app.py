@@ -2,6 +2,9 @@ import streamlit as st
 import pandas as pd
 from prophet import Prophet
 import matplotlib.pyplot as plt
+import matplotlib.dates as mdates
+
+
 
 st.set_page_config(page_title="Previsão do Petróleo Brent", layout="centered")
 
@@ -33,7 +36,11 @@ if uploaded_file:
     ax.set_title('Previsão de 30 Dias do Preço do Petróleo')
     ax.set_xlabel('Data')
     ax.set_ylabel('Preço (USD)')
+    # >>> CORREÇÃO DO EIXO X
+    ax.xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m-%d'))
+    plt.xticks(rotation=45)
     ax.grid(True)
+    plt.tight_layout()
     st.pyplot(fig2)
 
     st.subheader("Métricas de Erro")
