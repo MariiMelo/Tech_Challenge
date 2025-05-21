@@ -20,7 +20,7 @@ Construir um modelo de Machine Learning que preveja o preço do petróleo Brent 
 - Cálculo automático de MAE e RMSE
 
 ##  Deploy
-Você pode acessar o app aqui: [link do app quando publicar]
+Você pode acessar o app aqui: https://techchallenge-petroleoprices.streamlit.app/
 
 ##  Como usar
 1. Faça upload de um arquivo CSV com as colunas `Date` e `Preço (USD)`
