@@ -1,6 +1,9 @@
+
 # Tech Challenge: Previsão do Preço do Petróleo Brent 
 
 Este projeto foi desenvolvido como parte do Tech Challenge da pós-graduação em Data & Analytics (FIAP).
+
+# LINK PARA O VÍDEO: https://www.loom.com/share/f426a2afb4c54bb58e354d4de1f0c5ff?sid=95363d10-c368-40ab-9c31-6732f7e01ecf
 
 ##  Objetivo
 Construir um modelo de Machine Learning que preveja o preço do petróleo Brent com base em dados históricos, e entregar isso por meio de uma aplicação interativa.
